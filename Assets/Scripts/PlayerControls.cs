@@ -14,6 +14,6 @@ public class PlayerControls : MonoBehaviour {
 
     public void OnMove(CallbackContext ctx)
     {
-        controller.ReceiveMovementInput(ctx.ReadValue<Vector2>());
+        controller.MovInput = ctx.ReadValue<Vector2>();
     }
 }

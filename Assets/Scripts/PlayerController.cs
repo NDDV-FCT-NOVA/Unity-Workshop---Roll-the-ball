@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
 
     #region Input
+        public Vector2 MovInput{
+            set{
+                movInput = value;
+            }
+        }
         Vector2 movInput;
     #endregion
 
@@ -34,11 +39,6 @@ public class PlayerController : MonoBehaviour
 
         if(isGrounded)
             HandleMovement();
-    }
-
-    internal void ReceiveMovementInput(Vector2 input)
-    {
-        movInput = input;
     }
 
     public void HandleMovement()
